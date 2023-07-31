@@ -1,4 +1,4 @@
-# ProductManager
+# Full Stack ProductManager
 
 This application callled "ProductManager" is a full-stack app with nodeJs, React and MongoDB. It's capable of showing the products in database to the user and also add, delete or update if needed.
 
@@ -9,12 +9,21 @@ This application callled "ProductManager" is a full-stack app with nodeJs, React
 npm install 
 ```
 
-2. In the "backend" folder terminal run the following line:
+2. MongoDB Connection Setup:
+- Create a .env file in the root of the "backend" folder and add the following line to it:
+``` 
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-address>/<database-name>?retryWrites=true&w=majority
+```
+- Replace 'username' and 'password' with your MongoDB Atlas cluster's username and password, respectively. Also, replace 'cluster-address' with the connection address for your MongoDB Atlas cluster and 'database-name' with the created database name.
+
+- Make sure to add the .env file to your .gitignore to prevent sensitive information from being committed to the repository.
+
+3. In the "backend" folder terminal run the following line:
 ``` 
 npm run serve 
 ```
 
-3. In the "frontend" folder terminal run the following line:
+4. In the "frontend" folder terminal run the following line:
 ``` 
 npm start
 ```
@@ -35,3 +44,6 @@ npm install supertest --save-dev
 ``` 
 npx jest
 ```
+
+# Technologies used
+-NodeJS -Express -MongoDB -React
